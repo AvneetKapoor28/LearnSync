@@ -1,0 +1,257 @@
+.main-container-of-view {
+    /* overflow: scroll; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    width: 100%;
+    padding: 30px;
+}
+
+.main-container-of-view .title {
+    font-size: 3rem;
+}
+
+
+.inside-container {
+    overflow-y: auto;
+    /* background-color: blue; */
+    width: 50%;
+    height: 70vh;
+    box-shadow: 0px 0px 40px rgba(60, 60, 150, 0.25);
+    margin: 20px;
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.inside-container:hover {
+    scale: 1.05;
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.course-block:last-child {
+    border: none;
+}
+
+.course-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-bottom: 2px solid orangered;
+    padding-bottom: 20px;
+
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+.course-block:hover {
+    color: orangered;
+    letter-spacing: 0.1rem;
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+.course-block h4 {
+    display: flex;
+    color: rgb(186, 182, 182);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.burger-container {
+    height: 100%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.burger-container:hover {
+    .burger-line {
+        border: 1.5px solid orangered;
+    }
+}
+
+.burger-container:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: scale 0.3s ease-in-out;
+}
+
+.burger-line {
+    border: 1.5px solid black;
+    margin: 2px;
+    width: 27px;
+}
+
+.add-blur {
+    filter: blur(10px);
+    transition: all 0.5s ease-in-out;
+}
+
+.no-blur {
+    filter: blur(0px);
+    transition: all 0.5s ease-in-out;
+}
+
+.hide-filter {
+    z-index: -100;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.show-filter {
+    z-index: 200;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.smbtd-msg {
+    background-color: rgb(244, 250, 254);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 40px rgba(60, 60, 150, 0.25);
+    padding: 50px;
+}
+
+.move-center {
+    transform: translate(-50%, -50%);
+
+}
+
+.move-left {
+    transform: translate(-100%, -50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.move-right {
+    transform: translate(40%, -50%);
+}
+
+.btn-style {
+    margin: 10px;
+    margin-top: 13px;
+    background-color: aliceblue;
+    height: 40px;
+    width: 120px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(105, 117, 127, 0.5);
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.btn-style:hover {
+    background-color: orangered;
+    box-shadow: 0px 0px 10px orangered;
+    scale: 1.1;
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.great-btn {
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-59%);
+}
+
+.smbtd-msg h4 {
+    color: rgb(186, 182, 182);
+
+}
+
+.smbtd-msg h1 {
+    font-size: 2.7rem;
+    color: orangered;
+}
+
+.field-name {
+    font-size: 1.7rem;
+    margin-right: 20px;
+}
+
+.value-field {
+    font-size: 1.3rem;
+    margin: 20px;
+    color: rgb(186, 182, 182);
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.user-name {
+    font-size: 1.4rem;
+}
+
+.users-container {
+    /* overflow: auto; */
+    height: 60%;
+    max-height: 60%;
+}
+
+.users-list {
+    height: 70%;
+    width: 250px;
+    overflow: auto;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.delete-icon {
+    place-items: center;
+}
+
+.fa-trash {
+    font-size: 1.2rem;
+    color: #000;
+    transition: scale 0.3s ease-in-out;
+}
+
+.fa-trash:hover {
+    color: orangered;
+    cursor: pointer;
+    scale: 1.1;
+    transition: scale 0.3s ease-in-out;
+}
+
+.fa-pen-to-square {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    color: #000;
+    transition: scale 0.3s ease-in-out;
+}
+
+.fa-pen-to-square:hover {
+    color: orangered;
+    cursor: pointer;
+    scale: 1.1;
+    transition: scale 0.3s ease-in-out;
+    ;
+}
+
+form p{
+    margin: 15px;
+    padding: 10px;
+}
+
+form input{
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#title1, #courseCode1, #domain1, #profName1{
+    width: 50%;
+}
