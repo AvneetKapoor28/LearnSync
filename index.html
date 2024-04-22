@@ -10,24 +10,31 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <script defer src="loginScript.js"></script>
 
 <body>
     <header>
-        <h1>Learn<span id="nest">Sync</span></h1>
+        <h1>Learn<span id="sync">Sync</span></h1>
     </header>
+
+    <div class="left-side-text-box">
+        <h1 class="left-side-text">Manage</h1>
+        <h1 class="left-side-text">Your <span id="Learning">Learning</span></h1>
+        <h1 class="left-side-text">With <span id="Ease">Ease</span></h1>
+    </div>
 
     <div class="login-block">
         <h2>Login</h2>
         <form action="#" class="login-form">
             <label class="form-element label-element" for="username">Username </label>
-            <input class="form-element input-elem" type="text" name="username" id="username"><br>
+            <input class="form-element input-elem username-input" type="text" name="username" id="username"><br>
             <label class="form-element label-element" for="password">Password</label>
             <input class="form-element input-elem" type="password" name="password" id="password">
             <input class='form-submit-button' type="submit">
 
         </form>
+        <div class="sorry-msg"></div>
 
     </div>
 

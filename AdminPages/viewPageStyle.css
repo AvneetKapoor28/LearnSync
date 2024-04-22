@@ -251,6 +251,11 @@ form input{
     margin-right: 10px;
     padding: 5px;
 }
+form select{
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
 
 #title1, #courseCode1, #domain1, #profName1{
     width: 50%;

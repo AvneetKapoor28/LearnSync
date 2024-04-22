@@ -53,6 +53,7 @@ const deleteButton = document.querySelector('.confirm-delete-btn');
 const modifyIcons = document.querySelectorAll('.fa-pen-to-square');
 const modifyPopUp = document.querySelector('.modify-block');
 const cancelModifyButton = document.querySelector('.cancel-modify-btn');
+const submitModify = document.querySelector('.submit-modify')
 const modTitle = document.querySelector('#title1');
 const modCourseCode = document.querySelector('#courseCode1');
 const modDomain = document.querySelector('#domain1');
@@ -146,6 +147,8 @@ viewUsersButton.addEventListener('click', function () {
 deleteIcons.forEach((delIcon, index) => {
     delIcon.addEventListener('click', function () {
         deleteIconSelectedIndex = index;
+        const displayAreyousure = document.querySelector('.display-areyousure');
+        displayAreyousure.innerHTML=`<h1 id="display-title">${importedCourses[deleteIconSelectedIndex].courseTitle}?</h1>`;
         mainContainer.classList.remove('no-blur');
         mainContainer.classList.add('add-blur');
         deletePopUp.classList.remove('hide-filter');
@@ -183,10 +186,12 @@ modifyIcons.forEach((modIcon, index) => {
         modTitle.value = importedCourses[modifyIconSelectedIndex].courseTitle;
         modCourseCode.value = importedCourses[modifyIconSelectedIndex].courseCode;
         modDomain.value = importedCourses[modifyIconSelectedIndex].courseDomain;
-        // modStartDate.value = importedCourses[modifyIconSelectedIndex].courseStart;
-        modStartDate.value = '2024-05-28';
-        console.log(importedCourses[modifyIconSelectedIndex].courseStart);
-        modEndDate.value = importedCourses[modifyIconSelectedIndex].courseEnd;
+        const startDate2 = new Date(importedCourses[modifyIconSelectedIndex].courseStart);
+        const endDate2 = new Date(importedCourses[modifyIconSelectedIndex].courseEnd);
+        const startDateMarkup = `${startDate2.getFullYear()}-${('0' + (startDate2.getMonth() + 1)).slice(-2)}-${('0' + startDate2.getDate()).slice(-2)}`
+        const endDateMarkup = `${endDate2.getFullYear()}-${('0' + (endDate2.getMonth() + 1)).slice(-2)}-${('0' + endDate2.getDate()).slice(-2)}`
+        modStartDate.value = startDateMarkup;
+        modEndDate.value = endDateMarkup;
         modProfName.value = importedCourses[modifyIconSelectedIndex].courseProf;
 
     })
@@ -197,4 +202,29 @@ cancelModifyButton.addEventListener('click', function () {
     mainContainer.classList.remove('add-blur');
     modifyPopUp.classList.add('hide-filter');
     modifyPopUp.classList.remove('show-filter');
+});
+
+submitModify.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log('working');
+    importedCourses.splice(modifyIconSelectedIndex, 1);
+    const tempObject = {}
+    tempObject.courseTitle = modTitle.value;
+    tempObject.courseCode = modCourseCode.value;
+    tempObject.courseDomain = modDomain.value;
+    tempObject.courseStart = modStartDate.value;
+    tempObject.courseEnd = modEndDate.value;
+    tempObject.courseProf = modProfName.value;
+    importedCourses = [...importedCourses.slice(0,modifyIconSelectedIndex), tempObject, ...importedCourses.slice(modifyIconSelectedIndex)];
+    // importedCourses = importedCoursesCopy;
+    console.log(importedCourses);
+    mainContainer.classList.add('no-blur');
+    mainContainer.classList.remove('add-blur');
+    modifyPopUp.classList.add('hide-filter');
+    modifyPopUp.classList.remove('show-filter');
+    localStorage.setItem('CoursesList', JSON.stringify(importedCourses));
+    setTimeout(() => {
+        location.reload(true);
+    }, 500);
+
 })
