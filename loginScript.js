@@ -24,18 +24,20 @@ submitButton.addEventListener('click', function (event) {
     const userName = userNameElm.value;
     const passWord = passWordElm.value;
     let loggedin = false;
+    const url = window.location.origin;
+
     if (loggedin === false) {
         for (obj of adminsData) {
             if (obj.username === userName && obj.password === passWord) {
                 loggedin = true;
-                window.location.replace('http://127.0.0.1:8080/AdminPages/admin.html');
+                window.location.replace(`${url}/AdminPages/admin.html`);
             }
         }
 
         for (obj of usersData) {
             if (obj.username === userName && obj.password === passWord) {
                 loggedin = true;
-                window.location.replace('http://127.0.0.1:8080/UserPages/ViewPage.html');
+                window.location.replace(`${url}/UserPages/RegisterPage.html`);
             }
         }
     }

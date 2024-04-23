@@ -1,10 +1,8 @@
 .main-container-of-view {
-    /* overflow: scroll; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
     width: 100%;
     padding: 30px;
 }
@@ -30,9 +28,10 @@
 
 }
 
-.course-block:last-child {
+/* .course-block:last-child {
     border: none;
-}
+} */
+
 
 .course-block {
     display: flex;
@@ -42,47 +41,36 @@
     padding: 10px;
     border-bottom: 2px solid orangered;
     padding-bottom: 20px;
-    transition: letter-spacing 0.3s ease-in-out;
+    height: fit-content;
+
 }
 
 .course-block:hover {
     color: orangered;
-    letter-spacing: 0.1rem;
-    transition: letter-spacing 0.3s ease-in-out;
+    box-shadow: 0px 0px 40px rgba(60, 60, 150, 0.1);
+    transform: translateY(-5%);
+    transition: all 0.3s ease-in-out;
 }
 
 .course-block h4 {
     display: flex;
     color: rgb(186, 182, 182);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    margin-bottom: 3px;
 }
 
-.burger-container {
-    height: 100%;
-    margin-right: 20px;
+.input-label {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: scale 0.3s ease-in-out;
-
+    align-content: center;
+    margin: 10px;
 }
 
-.burger-container:hover {
-    .burger-line {
-        border: 1.5px solid orangered;
-    }
-}
+.input-label input {
+    width: 25px;
+    margin-right: 20px;
+    padding: 20px;
 
-.burger-container:hover {
-    cursor: pointer;
-    scale: 1.1;
-    transition: scale 0.3s ease-in-out;
-}
-
-.burger-line {
-    border: 1.5px solid black;
-    margin: 2px;
-    width: 27px;
 }
 
 .add-blur {
@@ -114,6 +102,8 @@
     left: 50%;
     box-shadow: 0px 0px 40px rgba(60, 60, 150, 0.25);
     padding: 50px;
+    min-width: 50%;
+    height: 30rem;
 }
 
 .move-center {
@@ -130,6 +120,19 @@
     transform: translate(40%, -50%);
 }
 
+.course-block-parent{
+    height: 80%;
+    overflow-y: auto;
+}
+
+.btn-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
 .btn-style {
     margin: 10px;
     margin-top: 13px;
@@ -146,115 +149,40 @@
     background-color: orangered;
     box-shadow: 0px 0px 10px orangered;
     scale: 1.1;
-    transition: scale 0.3s ease-in-out;
 
 }
 
-.great-btn {
-    margin-top: 20px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-59%);
-}
-
-.smbtd-msg h4 {
-    color: rgb(186, 182, 182);
-
-}
-
-.smbtd-msg h1 {
-    font-size: 2.7rem;
+#display-title{
+    font-size: 3rem;
     color: orangered;
 }
-
-.field-name {
-    font-size: 1.7rem;
-    margin-right: 20px;
+#courses-in-cart{
+    margin-left: 10px;
 }
 
-.value-field {
-    font-size: 1.3rem;
-    margin: 20px;
-    color: rgb(186, 182, 182);
-}
-
-.button-container {
-    width: 100%;
+.checkout-courses{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0px 30px;
+    overflow-y: auto;
+    justify-content: center;
+    height: 50%;
 }
 
-.user-name {
-    font-size: 1.4rem;
+.checkout-courses p{
+    font-size: 1.5rem;
+    margin: 5px 0px;
 }
 
-.users-container {
-    /* overflow: auto; */
-    height: 60%;
-    max-height: 60%;
+.checkout-courses p span{
+    font-size: 1rem;
+    color: rgb(190, 190, 190);
+    margin-left: 10px;
 }
 
-.users-list {
-    height: 70%;
-    width: 250px;
-    overflow: auto;
-}
-
-.icons-container {
+.button-container{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 20%;
-}
-
-.delete-icon {
-    place-items: center;
-}
-
-.fa-trash {
-    font-size: 1.2rem;
-    color: #000;
-    transition: scale 0.3s ease-in-out;
-}
-
-.fa-trash:hover {
-    color: orangered;
-    cursor: pointer;
-    scale: 1.1;
-    transition: scale 0.3s ease-in-out;
-}
-
-.fa-pen-to-square {
-    margin-left: 5px;
-    font-size: 1.2rem;
-    color: #000;
-    transition: scale 0.3s ease-in-out;
-}
-
-.fa-pen-to-square:hover {
-    color: orangered;
-    cursor: pointer;
-    scale: 1.1;
-    transition: scale 0.3s ease-in-out;
-    ;
-}
-
-form p{
-    margin: 15px;
-    padding: 10px;
-}
-
-form input{
-    margin-left: 5px;
-    margin-right: 10px;
-    padding: 5px;
-}
-form select{
-    margin-left: 5px;
-    margin-right: 10px;
-    padding: 5px;
-}
-
-#title1, #courseCode1, #domain1, #profName1{
-    width: 50%;
+    justify-content: space-around;
+    height: 50%;
 }

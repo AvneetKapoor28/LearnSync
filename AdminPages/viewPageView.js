@@ -8,7 +8,8 @@ const renderViewPage = function () {
 
     importedCourses.forEach((course, index) => {
         markup +=
-            `<div class="course-block">
+            `<div class="course-block-parent">
+            <div class="course-block">
         <div class="course-block-content">
             <h2>${course.courseTitle}</h2>
             <h4>${course.courseCode}</h4>
@@ -22,6 +23,7 @@ const renderViewPage = function () {
                         <div class="burger-line"></div>
                     </div>
                 </div>
+    </div>
     </div>`
     }); insideContainer.innerHTML = '';
     insideContainer.insertAdjacentHTML('afterbegin', markup);
@@ -148,7 +150,7 @@ deleteIcons.forEach((delIcon, index) => {
     delIcon.addEventListener('click', function () {
         deleteIconSelectedIndex = index;
         const displayAreyousure = document.querySelector('.display-areyousure');
-        displayAreyousure.innerHTML=`<h1 id="display-title">${importedCourses[deleteIconSelectedIndex].courseTitle}?</h1>`;
+        displayAreyousure.innerHTML = `<h1 id="display-title">${importedCourses[deleteIconSelectedIndex].courseTitle}?</h1>`;
         mainContainer.classList.remove('no-blur');
         mainContainer.classList.add('add-blur');
         deletePopUp.classList.remove('hide-filter');
@@ -204,7 +206,7 @@ cancelModifyButton.addEventListener('click', function () {
     modifyPopUp.classList.remove('show-filter');
 });
 
-submitModify.addEventListener('click', function(e){
+submitModify.addEventListener('click', function (e) {
     e.preventDefault();
     console.log('working');
     importedCourses.splice(modifyIconSelectedIndex, 1);
@@ -215,7 +217,7 @@ submitModify.addEventListener('click', function(e){
     tempObject.courseStart = modStartDate.value;
     tempObject.courseEnd = modEndDate.value;
     tempObject.courseProf = modProfName.value;
-    importedCourses = [...importedCourses.slice(0,modifyIconSelectedIndex), tempObject, ...importedCourses.slice(modifyIconSelectedIndex)];
+    importedCourses = [...importedCourses.slice(0, modifyIconSelectedIndex), tempObject, ...importedCourses.slice(modifyIconSelectedIndex)];
     // importedCourses = importedCoursesCopy;
     console.log(importedCourses);
     mainContainer.classList.add('no-blur');
