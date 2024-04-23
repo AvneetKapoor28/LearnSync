@@ -7,8 +7,11 @@
     <title>Register Courses | LearnSync</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="headerStyle.css">
-    <link rel="stylesheet" href="RegisterPageStyle.css">
-    <script defer src="RegisterPageView.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="UserViewPageStyle.css">
+    <script defer src="UserViewPageScript.js"></script>
 </head>
 
 <body>
@@ -31,27 +34,33 @@
                             d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z" />
                     </svg>
                 </li>
-
             </ul>
         </nav>
     </header>
 
     <div class="main-container-of-view no-blur">
-        <h2 class="title">Available Courses</h2>
+        <h2 class="title">All Courses</h2>
         <div class="inside-container">
-            <div class="course-block-parent">
-                <div class="course-block">
-                    <div class="course-block-content">
-                        <div class="input-label">
-                            <input type="checkbox" class="checkbox" id="JavaScript Fundamentals"
-                                name="JavaScript Fundamentals" value="JavaScript Fundamentals">
-                            <!-- <label for="JavaScript Fundamentals"> -->
-                            <h2>JavaScript Fundamentals</h2>
-                            <!-- </label> -->
-                        </div>
-                        <h4>BJS101L</h4>
+            <!-- <div class="course-block">
+                <div class="course-block-content">
+                    <h2>Course Title</h2>
+                    <h4>BJS101L</h4>
+                </div>
+                <div class="icons-container">
+                    <i class="fa-solid fa-trash"></i>
+                    <div class="burger-container burger-container-1">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
                     </div>
-                    <!-- <div class="icons-container">
+                </div>
+            </div>
+            <div class="course-block">
+                <div class="course-block-content">
+                    <h2>Advanced JavaScript</h2>
+                    <h4>BJS202L</h4>
+                </div>
+                <div class="icons-container">
                     <i class="fa-regular fa-pen-to-square"></i>
                     <i class="fa-solid fa-trash"></i>
                     <div class="burger-container burger-container-1">
@@ -59,50 +68,12 @@
                         <div class="burger-line"></div>
                         <div class="burger-line"></div>
                     </div>
-                </div> -->
                 </div>
-                <div class="course-block">
-                    <div class="course-block-content">
-                        <div class="input-label">
-                            <input type="checkbox" class="checkbox" id="Advanced" name="Advanced JavaScript"
-                                value="Advanced JavaScript">
-                            <!-- <label for="JavaScript Fundamentals"> -->
-                            <h2>Advanced JavaScript</h2>
-                            <!-- </label> -->
-                        </div>
-                        <h4>BJS101L</h4>
-                    </div>
-                    <!-- <div class="icons-container">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash"></i>
-                    <div class="burger-container burger-container-1">
-                        <div class="burger-line"></div>
-                        <div class="burger-line"></div>
-                        <div class="burger-line"></div>
-                    </div>
-                </div> -->
-                </div>
-            </div>
-            <div class="btn-wrapper">
-                <button class="btn-style register-btn">Register</button>
-            </div>
+            </div> -->
         </div>
     </div>
 
-    <!-- CHECKOUT POPUP -->
-    <div class=" smbtd-msg move-center hide-filter checkout-popup">
-        <h1 id="display-title">CHECKOUT</h1>
-        <!-- <h3 id="courses-in-cart">Courses in cart :</h3> -->
-        <div class="checkout-courses">
-            <p>Course 1<span>course-code1</span></p>
-            <p>Course 2<span>course-code2</span></p>
-        </div>
-        <h3>Total Amount (Inc. of GST) = 700INR</h3>
-        <div class="button-container">
-            <button class="btn-style close-btn checkout-cancel-btn">Cancel</button>
-            <button class="btn-style checkout-btn">Checkout</button>
-        </div>
-    </div>
+
 
 </body>
 

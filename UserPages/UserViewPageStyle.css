@@ -1,0 +1,130 @@
+.main-container-of-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.main-container-of-view .title {
+    font-size: 3rem;
+}
+
+
+.inside-container {
+    overflow-y: auto;
+    width: 50%;
+    height: 70vh;
+    box-shadow: 0px 0px 40px rgba(60, 60, 150, 0.25);
+    margin: 20px;
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.inside-container:hover {
+    scale: 1.05;
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.course-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-bottom: 2px solid orangered;
+    padding-bottom: 20px;
+    height: fit-content;
+
+}
+
+.course-block:hover {
+    color: orangered;
+    box-shadow: 0px 0px 40px rgba(60, 60, 150, 0.1);
+    transform: translateY(-5%);
+    transition: all 0.3s ease-in-out;
+}
+
+.course-block h4 {
+    display: flex;
+    color: rgb(186, 182, 182);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    margin-bottom: 3px;
+}
+
+.add-blur {
+    filter: blur(10px);
+    transition: all 0.5s ease-in-out;
+}
+
+.no-blur {
+    filter: blur(0px);
+    transition: all 0.5s ease-in-out;
+}
+
+.hide-filter {
+    z-index: -100;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.show-filter {
+    z-index: 200;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.btn-style {
+    margin: 10px;
+    margin-top: 13px;
+    background-color: aliceblue;
+    height: 40px;
+    width: 120px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(105, 117, 127, 0.5);
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.btn-style:hover {
+    background-color: orangered;
+    box-shadow: 0px 0px 10px orangered;
+    scale: 1.1;
+
+}
+
+.icons-container {
+    display: flex;
+    margin-right: 12px;
+    justify-content: right;
+    align-items: center;
+    width: 20%;
+}
+
+.delete-icon {
+    place-items: center;
+}
+
+.fa-trash {
+    font-size: 1.2rem;
+    color: #000;
+    transition: scale 0.3s ease-in-out;
+}
+
+.fa-trash:hover {
+    color: orangered;
+    cursor: pointer;
+    scale: 1.1;
+    transition: scale 0.3s ease-in-out;
+}
