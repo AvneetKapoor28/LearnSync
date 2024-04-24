@@ -30,14 +30,14 @@ submitButton.addEventListener('click', function (event) {
         for (obj of adminsData) {
             if (obj.username === userName && obj.password === passWord) {
                 loggedin = true;
-                window.location.replace(`${url}/AdminPages/admin.html`);
+                window.location.replace(`${url}/LearnSync/AdminPages/admin.html`);
             }
         }
 
         for (obj of usersData) {
             if (obj.username === userName && obj.password === passWord) {
                 loggedin = true;
-                window.location.replace(`${url}/UserPages/RegisterPage.html`);
+                window.location.replace(`${url}/LearnSync/UserPages/RegisterPage.html`);
             }
         }
     }
